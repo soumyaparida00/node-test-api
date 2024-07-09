@@ -8,15 +8,6 @@ data:
   DBHOST: "terraform-20240709093755987300000001.c98iq2wsq66l.ap-south-1.rds.amazonaws.com"
   DBPORT: "5432"
 ---
-apiVersion: v1
-kind: Secret
-metadata:
-  name: api-secret
-type: Opaque
-data:
-  DBUSER: ${{ secrets.DB_USERNAME }}
-  DBPASS: ${{ secrets.DB_PASSWORD }}
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:

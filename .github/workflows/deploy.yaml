@@ -55,5 +55,6 @@ jobs:
 
           aws eks update-kubeconfig --name my-eks-cluster --region ap-south-1
           kubectl config set-context --current --namespace=node-test-web
+          kubectl apply -f /home/runner/work/node-test-api/node-test-api/.github/k8s/secrets.yaml
           kubectl apply -f /home/runner/work/node-test-api/node-test-api/.github/k8s/deployment.yaml
           kubectl apply -f /home/runner/work/node-test-api/node-test-api/.github/k8s/service.yaml
